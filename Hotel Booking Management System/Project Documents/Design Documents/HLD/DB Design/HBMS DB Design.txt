@@ -1,0 +1,52 @@
+Database Tables
+
+
+CREATE SCHEMA HBMS ;  
+
+
+// User Table
+
+Create table HBMS.users(
+UserID (int, not null),
+UserName (varchar(20), not null),
+MobileNo (varchar(13), not null),
+PhoneNo (varchar(13), not null),
+UserAddress (varchar(50),not null),
+Email (Primary Key,varchar(30),not null),
+UserPassword(varchar(15), null);
+
+
+//Booking Details Table
+
+Create table HBMS.BookingDetails(
+BookingID (Primary Key,int,not null),
+RoomID(int,null),
+RoomNo (int,null),
+UserID (varchar(30),not null)
+CheckIn (datetime,notnull),
+CheckOut (datetime,notnull),
+NoOfPersons(int,not null),
+NoOfRooms(int,not null),
+HotelLocation(varchar(20),not null),
+HotelName(varchar(20), not null), 
+NoOfACRooms(int,null),
+NoOfNonACRooms(int,null);
+
+// Hotel Table
+
+Create table HBMS.Hotel(
+HotelId (Primary Key, varchar(4), not null),
+City (varchar(10),null),
+HotelName (varchar(20),null),
+Description (varchar(10),null),
+AvgRatePerNight (int,null),
+PhoneNo1 (varchar(10),null),
+PhoneNo2 (varchar(10),null),
+Address (varchar(25),null),
+Rating (varchar(4),null),
+Email (varchar(30),null),
+Fax (varchar(15),null),
+NoOfRooms(int,null); 
+
+
+
